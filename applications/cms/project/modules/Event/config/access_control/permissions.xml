@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0" 
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0" 
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+        <roles>
+            <!-- 
+                Defines which resource actions actions may be executed by the default editor.
+                
+                :INFO: 
+                Atm this is restricted for providing permission to for the default role only.
+                This will change extremely when we reach the iterations,
+                that have their main focus on the acl configuration.
+                Most probally then this file will be removed in the favour of a db driven management
+                with a fancy UI.
+            -->
+            <role name="default-permissions">
+                <acl>
+                    <grant>event::read</grant>
+                    <grant>event::write</grant>
+                    <grant>event::create</grant>
+
+                    <!-- edit state perms -->
+                    <grant>event.edit::read</grant>
+                    <grant>event.edit::write</grant>
+                    <grant>event.edit::promote</grant>
+                    <grant>event.edit::delete</grant>
+                    <!-- <grant if="user_is_item_owner">event.edit::write</grant> -->
+
+                    <!-- delete state perms -->
+                    <grant>event.delete::write</grant>
+                    
+                    <!-- publish state perms -->
+                    <grant>event.publish::write</grant>
+
+                    <!-- published state perms -->
+                    <grant>event.published::read</grant>
+                    <grant>event.published::write</grant>
+                    <grant>event.published::promote</grant>
+                    <grant>event.published::demote</grant>
+                    <grant>event.published::delete</grant>
+                    <!-- <grant if="user_is_item_owner">event.published::write</grant> -->
+
+                    <!-- archive state perms -->
+                    <grant>event.archive::write</grant>
+
+                    <!-- archived state perms -->
+                    <grant>event.archived::read</grant>
+                    <grant>event.archived::write</grant>
+                    <grant>event.archived::promote</grant>
+                    <grant>event.archived::demote</grant>
+                    <grant>event.archived::delete</grant>
+                    <!-- <grant if="user_is_item_owner">event.archived::write</grant> -->
+                </acl>
+            </role>
+        </roles>
+    </ae:configuration>
+</ae:configurations>

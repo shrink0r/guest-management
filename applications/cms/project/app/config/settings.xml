@@ -17,8 +17,8 @@
                 and add in the information below.
             -->
             <setting name="project_contact">
-                <ae:parameter name="name">{Firstname}</ae:parameter>
-                <ae:parameter name="email">{Surname}</ae:parameter>
+                <ae:parameter name="name">Manuel Wendt</ae:parameter>
+                <ae:parameter name="email">murmlewendt@gmail.com</ae:parameter>
             </setting>
             <!--
                 If you want to influence the rendering behaviour of the navigation,
@@ -39,14 +39,14 @@
         <!--
             Set an explicit order for how modules are listed inside the navigation.
         -->
-        <!--
         <settings prefix="project.modules.">
             <setting name="sort_order">
-                <ae:parameter>{module-name}</ae:parameter>
-                <ae:parameter>{module-name}</ae:parameter>
+                <ae:parameter>Event</ae:parameter>
+                <ae:parameter>Guestlist</ae:parameter>
+                <ae:parameter>Guest</ae:parameter>
+                <ae:parameter>User</ae:parameter>
             </setting>
         </settings>
-        -->
     </ae:configuration>
     <!--
         Example for changing settings based on an evironment modifier.

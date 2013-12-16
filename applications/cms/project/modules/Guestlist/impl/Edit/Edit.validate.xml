@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    parent="%core.module_dir%/Guestlist/config/validators.xml">
+    <ae:configuration>
+        <validators method="read">
+            <validator class="guestlist" required="false">
+                <argument>guestlist</argument>
+            </validator>
+        </validators>
+
+        <validators method="write">
+            <validator class="guestlist">
+                <argument>guestlist</argument>
+            </validator>
+        </validators>
+    </ae:configuration>
+</ae:configurations>
+
+
+
+
+

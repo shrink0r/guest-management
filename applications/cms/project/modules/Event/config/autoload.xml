@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations 
+    xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" 
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+
+        <!-- Agavi -->
+        <autoload name="EventBaseAction">%core.module_dir%/Event/lib/agavi/action/EventBaseAction.class.php</autoload>
+        <autoload name="EventBaseView">%core.module_dir%/Event/lib/agavi/view/EventBaseView.class.php</autoload>
+        <autoload name="EventDocumentValidator">%core.module_dir%/Event/lib/agavi/validator/EventDocumentValidator.class.php</autoload>
+        
+        <!-- Service -->
+        <autoload name="EventService">%core.module_dir%/Event/lib/EventService.class.php</autoload>
+    </ae:configuration>
+</ae:configurations>

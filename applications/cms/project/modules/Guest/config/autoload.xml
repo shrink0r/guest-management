@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations 
+    xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" 
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+
+        <!-- Agavi -->
+        <autoload name="GuestBaseAction">%core.module_dir%/Guest/lib/agavi/action/GuestBaseAction.class.php</autoload>
+        <autoload name="GuestBaseView">%core.module_dir%/Guest/lib/agavi/view/GuestBaseView.class.php</autoload>
+        <autoload name="GuestDocumentValidator">%core.module_dir%/Guest/lib/agavi/validator/GuestDocumentValidator.class.php</autoload>
+        
+        <!-- Service -->
+        <autoload name="GuestService">%core.module_dir%/Guest/lib/GuestService.class.php</autoload>
+    </ae:configuration>
+</ae:configurations>

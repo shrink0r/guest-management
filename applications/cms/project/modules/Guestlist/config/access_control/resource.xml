@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0" 
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0" 
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+        <!-- 
+            Defines all actions that shall be available upon the guestlist resource.
+
+            :INFO:
+            In opposite to the permissions file, which will probally vanish,
+            this file will serve as a source to the later rights gui,
+            allowing to show the available actions per resource/module.
+        -->
+        <resources>
+            <resource name="guestlist">
+                <description>Defines a resource that represents guestlist documents.</description>
+                <actions>
+                    <action>guestlist::read</action>
+                    <action>guestlist::write</action>
+                    <action>guestlist::create</action>
+
+                    <action>guestlist.edit::read</action>
+                    <action>guestlist.edit::write</action>
+                    <action>guestlist.edit::promote</action>
+                    <action>guestlist.edit::delete</action>
+
+                    <action>guestlist.publish::write</action>
+                    <action>guestlist.publish::promote</action>
+                    <action>guestlist.publish::demote</action>
+
+                    <action>guestlist.published::read</action>
+                    <action>guestlist.published::write</action>
+                    <action>guestlist.published::promote</action>
+                    <action>guestlist.published::demote</action>
+                    <action>guestlist.published::delete</action>
+
+                    <action>guestlist.archive::write</action>
+                    <action>guestlist.archive::promote</action>
+                    <action>guestlist.archive::demote</action>
+
+                    <action>guestlist.archived::read</action>
+                    <action>guestlist.archived::write</action>
+                    <action>guestlist.archived::promote</action>
+                    <action>guestlist.archived::demote</action>
+                    <action>guestlist.archived::delete</action>
+
+                    <action>guestlist.delete::write</action>
+                </actions>
+            </resource>
+        </resources>
+    </ae:configuration>
+</ae:configurations>

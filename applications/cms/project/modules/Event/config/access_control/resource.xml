@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0" 
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0" 
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+    <ae:configuration>
+        <!-- 
+            Defines all actions that shall be available upon the event resource.
+
+            :INFO:
+            In opposite to the permissions file, which will probally vanish,
+            this file will serve as a source to the later rights gui,
+            allowing to show the available actions per resource/module.
+        -->
+        <resources>
+            <resource name="event">
+                <description>Defines a resource that represents event documents.</description>
+                <actions>
+                    <action>event::read</action>
+                    <action>event::write</action>
+                    <action>event::create</action>
+
+                    <action>event.edit::read</action>
+                    <action>event.edit::write</action>
+                    <action>event.edit::promote</action>
+                    <action>event.edit::delete</action>
+
+                    <action>event.publish::write</action>
+                    <action>event.publish::promote</action>
+                    <action>event.publish::demote</action>
+
+                    <action>event.published::read</action>
+                    <action>event.published::write</action>
+                    <action>event.published::promote</action>
+                    <action>event.published::demote</action>
+                    <action>event.published::delete</action>
+
+                    <action>event.archive::write</action>
+                    <action>event.archive::promote</action>
+                    <action>event.archive::demote</action>
+
+                    <action>event.archived::read</action>
+                    <action>event.archived::write</action>
+                    <action>event.archived::promote</action>
+                    <action>event.archived::demote</action>
+                    <action>event.archived::delete</action>
+
+                    <action>event.delete::write</action>
+                </actions>
+            </resource>
+        </resources>
+    </ae:configuration>
+</ae:configurations>

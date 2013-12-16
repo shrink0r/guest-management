@@ -13,9 +13,12 @@
                 <message_translator class="AgaviSimpleTranslator">
                      <ae:parameter name="labels">
                         <ae:parameter name="de">
-                            <ae:parameter name="brand-name">guest-management</ae:parameter>
-                            <ae:parameter name="brand-title">guest-management</ae:parameter>
-                            <!-- german project module-name translations go here -->
+                            <ae:parameter name="brand-name">Gäste-Management Anwendung</ae:parameter>
+                            <ae:parameter name="brand-title">Party gestalten statt Gäste verwalten!</ae:parameter>
+                            <ae:parameter name="Guest">Gäste</ae:parameter>
+                            <ae:parameter name="Guestlist">Gästelisten</ae:parameter>
+                            <ae:parameter name="Event">Veranstaltungen</ae:parameter>
+                            <ae:parameter name="User">Systembenutzer</ae:parameter>
                         </ae:parameter>
                         <ae:parameter name="en">
                             <ae:parameter name="brand-name">guest-management</ae:parameter>
