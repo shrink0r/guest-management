@@ -1,0 +1,5 @@
+cd <%= hosting_root %>
+git clone git@github.com:berlinonline/guest-management.git guest-management-cms
+cd guest-management-cms/applications/cms
+mv /home/vagrant/cms_project_environaut.xml app/config/project_environaut.xml
+./configure-project.sh
