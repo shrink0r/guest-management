@@ -109,10 +109,10 @@
                                     <ae:parameter name="main">
                                         <ae:parameter>title</ae:parameter>
                                         <ae:parameter>date</ae:parameter>
-                                        <ae:parameter>description</ae:parameter>
-                                    </ae:parameter>
-                                    <ae:parameter name="guests">
                                         <ae:parameter>guest_lists</ae:parameter>
+                                    </ae:parameter>
+                                    <ae:parameter name="description">
+                                        <ae:parameter>description</ae:parameter>
                                     </ae:parameter>
                                 </ae:parameter>
                             </ae:parameter>
@@ -173,6 +173,15 @@
                 <ae:parameter name="date">
                     <ae:parameter name="input">DateFieldInputRenderer</ae:parameter>
                 </ae:parameter>
+                <ae:parameter name="description">
+                    <ae:parameter name="input">
+                        <ae:parameter name="type">TextareaFieldInputRenderer</ae:parameter>
+                        <ae:parameter name="options">
+                            <ae:parameter name="render_label">false</ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
+                </ae:parameter>
+
             </setting>
 
             <!--

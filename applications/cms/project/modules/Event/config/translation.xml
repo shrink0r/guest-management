@@ -88,6 +88,7 @@
                             <ae:parameter name="content">Inhalte</ae:parameter>
                             <ae:parameter name="main">Stammdaten</ae:parameter>
                             <ae:parameter name="guests">Geladene Gäste</ae:parameter>
+                            <ae:parameter name="description">Beschreibung</ae:parameter>
                         </ae:parameter>
                     </ae:parameter>
 

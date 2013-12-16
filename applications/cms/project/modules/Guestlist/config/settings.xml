@@ -98,6 +98,17 @@
             -->
             <setting name="input_template">
                 <ae:parameter name="tabs">
+                    <ae:parameter name="invitations">
+                        <ae:parameter name="rows">
+                            <ae:parameter>
+                                <ae:parameter name="groups">
+                                    <ae:parameter name="-invitations">
+                                        <ae:parameter>invitations</ae:parameter>
+                                    </ae:parameter>
+                                </ae:parameter>
+                            </ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
                     <ae:parameter name="content">
                         <ae:parameter name="rows">
                             <ae:parameter>
@@ -105,17 +116,6 @@
                                     <ae:parameter name="main">
                                         <ae:parameter>title</ae:parameter>
                                         <ae:parameter>description</ae:parameter>
-                                    </ae:parameter>
-                                </ae:parameter>
-                            </ae:parameter>
-                        </ae:parameter>
-                    </ae:parameter>
-                    <ae:parameter name="invitations">
-                        <ae:parameter name="rows">
-                            <ae:parameter>
-                                <ae:parameter name="groups">
-                                    <ae:parameter name="-invitations">
-                                        <ae:parameter>invitations</ae:parameter>
                                     </ae:parameter>
                                 </ae:parameter>
                             </ae:parameter>
