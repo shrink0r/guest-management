@@ -19,6 +19,7 @@
                     <action>event::read</action>
                     <action>event::write</action>
                     <action>event::create</action>
+                    <action>event::assign_guests</action>
 
                     <action>event.edit::read</action>
                     <action>event.edit::write</action>

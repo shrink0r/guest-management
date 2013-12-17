@@ -44,6 +44,7 @@
                             <ae:parameter name="reference_suggest_to_short">Bitte mindestens ein Zeichen eingeben</ae:parameter>
                             <ae:parameter name="no_references_found">Keine passenden Ergebnisse gefunden</ae:parameter>
                             <ae:parameter name="assign_references">Verknüpfen</ae:parameter>
+                            <ae:parameter name="assign_guests">Gästelisten Verknüpfen</ae:parameter>
 
                             <!-- workflow transitions (context sensitive action names for promote and demote) -->
                             <ae:parameter name="edit.promote">Publizieren</ae:parameter>

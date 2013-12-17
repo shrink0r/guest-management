@@ -22,8 +22,29 @@ class GuestDocument extends Base\GuestDocument
 
         if (in_array('firstname', $changed_fields) || in_array('lastname', $changed_fields)) {
             $this->setFullname($this->getFirstname() . ' ' . $this->getLastname());
+        } elseif (in_array('fullname', $changed_fields)) {
+            $this->applyFullname();
+        } else {
+            $fullname = $this->getFullname();
+            $firstname = $this->getFirstname();
+            $lastname = $this->getLastname();
+            if (!empty($fullname) && empty($firstname) && empty($lastname)) {
+                $this->applyFullname();
+            }
         }
 
         parent::onBeforeWrite();
+    }
+
+    protected function applyFullname()
+    {
+        $fullname = $this->getFullname();
+        $name_parts = explode(' ', $fullname);
+        if (isset($name_parts[0])) {
+            $this->setFirstname($name_parts[0]);
+        }
+        if (isset($name_parts[1])) {
+            $this->setLastname($name_parts[1]);
+        }
     }
 }

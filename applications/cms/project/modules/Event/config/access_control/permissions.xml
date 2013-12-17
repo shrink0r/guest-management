@@ -20,6 +20,7 @@
                     <grant>event::read</grant>
                     <grant>event::write</grant>
                     <grant>event::create</grant>
+                    <grant>event::assign_guests</grant>
 
                     <!-- edit state perms -->
                     <grant>event.edit::read</grant>
