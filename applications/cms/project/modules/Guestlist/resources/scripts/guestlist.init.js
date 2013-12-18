@@ -48,6 +48,23 @@
     {
         var controller = honeybee.core.EditController.factory('.controller-edit');
         initStickyControls();
+
+        var messageEventHandler = function(event)
+        {
+            var msg_data = JSON.parse(event.data);
+            if (msg_data.field_id) {
+                var parent_aggregate = $('#' + msg_data.field_id).parents('.aggregate');
+                if (parent_aggregate.length > 0) {
+                    var label = parent_aggregate.find('.pill-container .tagslist-tag span').first();
+                    var label_text = 'Kein Gast zugewiesen';
+                    if (label) {
+                        label_text = label.text();
+                    }
+                    parent_aggregate.find('.input-group-label .displayed_text').text(label_text);
+                }
+            }
+        };
+        window.addEventListener('message', messageEventHandler,false);
     }
     else if (1 === list_wrapper.length)
     {

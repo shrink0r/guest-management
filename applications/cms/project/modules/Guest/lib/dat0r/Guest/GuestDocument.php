@@ -20,14 +20,19 @@ class GuestDocument extends Base\GuestDocument
             $changed_fields[] = $change->getField()->getName();
         }
 
-        if (in_array('firstname', $changed_fields) || in_array('lastname', $changed_fields)) {
-            $this->setFullname($this->getFirstname() . ' ' . $this->getLastname());
+        $fullname = $this->getFullname();
+        $firstname = $this->getFirstname();
+        $lastname = $this->getLastname();
+
+        if (
+            empty($fullname)
+            || in_array('firstname', $changed_fields)
+            || in_array('lastname', $changed_fields)
+        ) {
+            $this->setFullname($firstname . ' ' . $lastname);
         } elseif (in_array('fullname', $changed_fields)) {
             $this->applyFullname();
         } else {
-            $fullname = $this->getFullname();
-            $firstname = $this->getFirstname();
-            $lastname = $this->getLastname();
             if (!empty($fullname) && empty($firstname) && empty($lastname)) {
                 $this->applyFullname();
             }

@@ -34,6 +34,17 @@
                 </option>
             </field>
 
+            <field name="assignee" type="reference">
+                <option name="max">1</option>
+                <option name="references">
+                    <option>
+                        <option name="module">\Honeybee\Domain\User\UserModule</option>
+                        <option name="identity_field">identifier</option>
+                        <option name="display_field">username</option>
+                    </option>
+                </option>
+            </field>
+
             <!-- Honeybee workflow integration; dont touch!! -->
             <field name="meta" type="key-value">
                 <description>Holds a set of generic attributes.</description>

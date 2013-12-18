@@ -38,6 +38,15 @@
                     <ae:parameter name="description">
                         <ae:parameter name="valuefield">description</ae:parameter>
                     </ae:parameter>
+                    <ae:parameter name="assignee">
+                        <ae:parameter name="valuefield">assignee</ae:parameter>
+                        <ae:parameter name="renderer">
+                            <ae:parameter name="implementor">ReferenceListValueRenderer</ae:parameter>
+                            <ae:parameter name="options">
+                                <ae:parameter name="displayField">username</ae:parameter>
+                            </ae:parameter>
+                        </ae:parameter>
+                    </ae:parameter>
                     <ae:parameter name="state">
                         <ae:parameter name="valuefield">workflowTicket</ae:parameter>
                         <ae:parameter name="renderer">
@@ -75,6 +84,7 @@
                         <ae:parameter name="promote">ctrl.proceed(is_batch, null, 'promote')</ae:parameter>
                         <ae:parameter name="demote">ctrl.proceed(is_batch, null, 'demote')</ae:parameter>
                         <ae:parameter name="assign_guests">ctrl.assignReference(is_batch, null, 'guest_lists')</ae:parameter>
+                        <ae:parameter name="assign_assignee">ctrl.assignReference(is_batch, null, 'assignee')</ae:parameter>
                     </ae:parameters>
                 </ae:parameter>
                 <ae:parameter name="itemActions">
@@ -84,6 +94,14 @@
                             <ae:parameter name="parameters">
                                 <ae:parameters>
                                     <ae:parameter>guest_lists</ae:parameter>
+                                </ae:parameters>
+                            </ae:parameter>
+                        </ae:parameter>
+                        <ae:parameter name="assign_assignee">
+                            <ae:parameter name="action">assignReference</ae:parameter>
+                            <ae:parameter name="parameters">
+                                <ae:parameters>
+                                    <ae:parameter>assignee</ae:parameter>
                                 </ae:parameters>
                             </ae:parameter>
                         </ae:parameter>

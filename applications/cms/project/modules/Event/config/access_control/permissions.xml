@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ae:configurations
-    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0" 
-    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0" 
+    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
     xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
     <ae:configuration>
         <roles>
-            <!-- 
+            <!--
                 Defines which resource actions actions may be executed by the default editor.
-                
-                :INFO: 
+
+                :INFO:
                 Atm this is restricted for providing permission to for the default role only.
                 This will change extremely when we reach the iterations,
                 that have their main focus on the acl configuration.
@@ -21,6 +21,7 @@
                     <grant>event::write</grant>
                     <grant>event::create</grant>
                     <grant>event::assign_guests</grant>
+                    <grant>event::assign_assignee</grant>
 
                     <!-- edit state perms -->
                     <grant>event.edit::read</grant>
@@ -31,7 +32,7 @@
 
                     <!-- delete state perms -->
                     <grant>event.delete::write</grant>
-                    
+
                     <!-- publish state perms -->
                     <grant>event.publish::write</grant>
 

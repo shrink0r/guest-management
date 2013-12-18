@@ -88,6 +88,19 @@
         }
       }
     },
+    "assignee":{
+      "type":"object",
+      "properties":{
+        "id":{
+          "type":"string",
+          "index":"not_analyzed"
+        },
+        "module":{
+          "type":"string",
+          "index":"not_analyzed"
+        }
+      }
+    },
     "meta":{
       "type":"object",
       "dynamic":true

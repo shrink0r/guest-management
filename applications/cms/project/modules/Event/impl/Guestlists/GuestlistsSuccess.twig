@@ -1,0 +1,49 @@
+<div class="container-fluid wrapper event-app-container"
+     data-edit-controller-options="{{ controllerOptions|raw }}">
+    <div class="row-fluid" style="margin-top: 45px">
+        <h1 class="app-title">Du kommst hier nicht rein - App</h1>
+        <label class="event-selector-label" for="event-selector">Party(Veranstaltung auswählen)</label>
+        <select name="selected-event" class="event-selector">
+            <option value=""></option>
+        {% for event in event_data %}
+            <option value="{{ event.id }}">{{ event.title }}</option>
+        {% endfor %}
+        </select>
+        <ul class="events-list">
+            {% for event in event_data %}
+            <li class="event" id="{{ event.id }}">
+                <div class="event-box">
+                    <h2 class="title"><label>Veranstaltung</label>{{ event.title }}</h2>
+                    <div class="description"><label>Beschreibung</label>{{ markdown(event.description)|raw }}</div>
+                </div>
+                <label for="guest-selector"><h3 class="header">Gäste</h3></label>
+                <select name="selected-guest" id="guest-selector">
+                    <option value=""></option>
+                    {% for guest in event.all_guests %}
+                    <option value="{{ guest.relation_graph|json_encode }}">{{ guest.name }}</option>
+                    {% endfor %}
+                </select>
+                <ul class="guestlists-list">
+                    {% for guestlist in event.guest_lists %}
+                    <li class="guestlist" id="{{ guestlist.id }}">
+                        <h4 class="title">{{ guestlist.title }}</h4>
+                       {# <a href="#description" class="toggle-description">Beschreibung</a>
+                        <div class="description">{{ markdown(guestlist.description)|raw }}</div> #}
+                        <ul class="guests-list">
+                            {% for guest in guestlist.guests %}
+                            <li class="guest" id="{{ guest.id }}">
+                                <h5 class="username">{{ guest.name }} <span class="hb-icon-checkmark" /></h5>
+                                <span class="label label-warning trigger-decrement-xguests">Plus <i class="count">{{ guest.plus }}</i></span>
+                                <span class="label label-default trigger-checkin">Einchecken</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="push"></div>
+</div>

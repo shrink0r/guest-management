@@ -34,6 +34,7 @@
                             <ae:parameter name="title">Titel</ae:parameter>
                             <ae:parameter name="description">Beschreibung</ae:parameter>
                             <ae:parameter name="date">Datum</ae:parameter>
+                            <ae:parameter name="assignee">Kassenmensch</ae:parameter>
 
                             <!-- reference batch dialogs -->
                             <ae:parameter name="batch_actions">Stapelverarbeitung</ae:parameter>
@@ -45,6 +46,7 @@
                             <ae:parameter name="no_references_found">Keine passenden Ergebnisse gefunden</ae:parameter>
                             <ae:parameter name="assign_references">Verknüpfen</ae:parameter>
                             <ae:parameter name="assign_guests">Gästelisten Verknüpfen</ae:parameter>
+                            <ae:parameter name="assign_assignee">Kassenmensch zuweisen</ae:parameter>
 
                             <!-- workflow transitions (context sensitive action names for promote and demote) -->
                             <ae:parameter name="edit.promote">Publizieren</ae:parameter>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ae:configurations
-    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0" 
-    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0" 
+    xmlns="http://berlinonline.de/schemas/honeybee/config/access_control/1.0"
+    xmlns:env="http://berlinonline.de/schemas/honeybee/config/envelope/definition/1.0"
     xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
     <ae:configuration>
-        <!-- 
+        <!--
             Defines all actions that shall be available upon the event resource.
 
             :INFO:
@@ -20,6 +20,7 @@
                     <action>event::write</action>
                     <action>event::create</action>
                     <action>event::assign_guests</action>
+                    <action>event::assign_assignee</action>
 
                     <action>event.edit::read</action>
                     <action>event.edit::write</action>
